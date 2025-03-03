@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='Edge WebView2 - Repo P2' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1740997014582'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='2'>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.swt.webview.feature' version='0.0.3.RELEASE'>
+      <properties size='9'>
+        <property name='artifact.size' value='686'/>
+        <property name='download.size' value='686'/>
+        <property name='maven-groupId' value='org.eclipse.swt.webview'/>
+        <property name='maven-artifactId' value='org.eclipse.swt.webview.feature'/>
+        <property name='maven-version' value='0.0.3.RELEASE'/>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.md5' value='4e0cdd2b224661079a4cea448f67e7a2'/>
+        <property name='download.checksum.md5' value='4e0cdd2b224661079a4cea448f67e7a2'/>
+        <property name='download.checksum.sha-256' value='bf3f9e530e9c049707f18d1269c136e4807c1bc0f314a1f8b6fa17e2390eba38'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt.webview' version='0.0.3.RELEASE'>
+      <properties size='8'>
+        <property name='artifact.size' value='83095'/>
+        <property name='download.size' value='83095'/>
+        <property name='maven-groupId' value='org.eclipse.swt.webview'/>
+        <property name='maven-artifactId' value='org.eclipse.swt.webview'/>
+        <property name='maven-version' value='0.0.3.RELEASE'/>
+        <property name='download.md5' value='db303ab016da2181570e2c0700de18f1'/>
+        <property name='download.checksum.md5' value='db303ab016da2181570e2c0700de18f1'/>
+        <property name='download.checksum.sha-256' value='fdae4b36650aba83c60de04d9b4a99e63f1fd89463926cb26f5fa998a187a305'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

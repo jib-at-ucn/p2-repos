@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='Repackaging de la JRE - Repo P2' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1740988412530'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='2'>
+    <artifact classifier='org.eclipse.update.feature' id='net.adoptium.jre.feat' version='1.8.0.442'>
+      <properties size='9'>
+        <property name='artifact.size' value='1034'/>
+        <property name='download.size' value='1034'/>
+        <property name='maven-groupId' value='net.adoptium.jre'/>
+        <property name='maven-artifactId' value='net.adoptium.jre.feat'/>
+        <property name='maven-version' value='1.8.0.442'/>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.md5' value='2120c3fd797e0034fbec7ad5afdd532a'/>
+        <property name='download.checksum.md5' value='2120c3fd797e0034fbec7ad5afdd532a'/>
+        <property name='download.checksum.sha-256' value='acdcb1fe16154094aea01595bdeb8bb428fe02db04d42d600ac9913759ed7f41'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='net.adoptium.jre.plug' version='1.8.0.442'>
+      <properties size='8'>
+        <property name='artifact.size' value='40494285'/>
+        <property name='download.size' value='40494285'/>
+        <property name='maven-groupId' value='net.adoptium.jre'/>
+        <property name='maven-artifactId' value='net.adoptium.jre.plug'/>
+        <property name='maven-version' value='1.8.0.442'/>
+        <property name='download.md5' value='a52f8a2a8fd0fdf935c443f3e231c2fd'/>
+        <property name='download.checksum.md5' value='a52f8a2a8fd0fdf935c443f3e231c2fd'/>
+        <property name='download.checksum.sha-256' value='f76c52e5f85a711d44e112bc710ce76d284230093dafffd69f6d4413085f338b'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>
